@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterep11/screen/NewPage.dart';
+import 'package:flutterep11/screens/Ep13Page.dart';
+import 'package:flutterep11/screens/NewPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page - ep11'),
+      home: MyHomePage(title: 'See-Flutter เรียนรู้ไปด้วยกัน'),
     );
   }
 }
@@ -96,25 +97,16 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          // mainAxisAlignment: MainAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.center,
           // scrollDirection: Axis.horizontal,
           children: <Widget>[
 //============================================================
 // CREATE BUTTON
 //============================================================
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),  
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),  
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),  
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),   
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),
-            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('New Page'),),                                                                    
+            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('EP11'),),
+            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => NewPage()),);},child: Text('EP12'),),  
+            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep13Page()),);},child: Text('EP13 - Basic Widget'),),              
+                                                                
 //============================================================
 // TEXT
 //============================================================
