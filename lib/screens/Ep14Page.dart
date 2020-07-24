@@ -1,82 +1,56 @@
 import 'package:flutter/material.dart';
 
-//==================================================================
-// REF AND THKS: https://androidkt.com/flutter-alertdialog-example/
-//==================================================================
-
 class Ep14Page extends StatefulWidget {
   @override
   _Ep14PageState createState() => _Ep14PageState();
 }
 
+//======================================================================
+// DECLARE ENUM
+//======================================================================  
 enum ConfirmAction { CANCEL, ACCEPT }
 enum Departments { Production, Research, Purchasing, Marketing, Accounting }
+
 class _Ep14PageState extends State<Ep14Page> {
-//==================================================================
-// STEP 1: CREATE GLOBAL KEY VARIABLE
-//==================================================================  
+//======================================================================
+// STEP#1) DECLARE VARIABLE SCAFFOLD KEY
+//======================================================================  
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-//==================================================================
-// STEP 2: KEY IN SCAFFOLD
-//==================================================================       
+//======================================================================
+// STEP#2) SET PROPERTY KEY : SCAFFOLD KEY
+//======================================================================        
       key: scaffoldKey,
-      appBar: AppBar(title: Text('EP14 - SNACKBAR & DIALOG'),),
+      appBar: AppBar(title: Text('Ep 14 - Snack Bar & Dialog'),),
       body: ListView(children: <Widget>[
-          RaisedButton(onPressed: (){fnSnackBar();}, child: Text('SnackBar'),),
-          RaisedButton(onPressed: (){_showMyDialog();}, child: Text('Dialog - SHOW MESSAGE'),),
-          RaisedButton(onPressed: (){_ackAlert(context);}, child: Text('Dialog - ACKNOWLDGET DIALOG'),),                    
-          RaisedButton(onPressed: (){_asyncConfirmDialog(context);}, child: Text('Dialog - CONFIRM'),),           
-          RaisedButton(onPressed: (){_asyncSimpleDialog(context);}, child: Text('Dialog - SELECT OPTION'),), 
-          RaisedButton(onPressed: (){_asyncInputDialog(context);}, child: Text('Dialog - WITH TEXT FIELD'),), 
-                ],)
-                
-              );
-            }
- //==================================================================
-// FUNCTION#1: SNACKBAR
-//==================================================================           
-      void fnSnackBar() {
+//======================================================================
+// STEP#4) CALL SNACKBAR
+//======================================================================   
+           RaisedButton(onPressed: (){fnSnackBar();},child: Text('Snack Bar'),),
+           RaisedButton(onPressed: (){_ackAlert(context);},child: Text('Dialog - OK'),),        
+           RaisedButton(onPressed: (){_asyncConfirmDialog(context);},child: Text('Dialog - CONFIRM'),),   
+           RaisedButton(onPressed: (){_asyncSimpleDialog(context);},child: Text('Dialog - Simple'),),   
+           RaisedButton(onPressed: (){_asyncInputDialog(context);},child: Text('Dialog - INPUT TEXT'),),                                       
+      ],)
+    
+       
+     );
+    }
+//======================================================================
+// STEP#3) CREATE FUNCTION SNACK BAR
+//======================================================================              
+    fnSnackBar() {
         scaffoldKey.currentState.showSnackBar(SnackBar(
-          backgroundColor: Colors.green,
-          content: Text('This is SnackBar', style: TextStyle(color: Colors.white))));
-      }
-//==================================================================
-// FUNCTION#2: DIALOG - ANDRIOD
-//==================================================================  
-Future<void> _showMyDialog() async {
-  return showDialog<void>(
-    context: context,
-    barrierDismissible: false, // user must tap button!
-    builder: (BuildContext context) {
-      return AlertDialog(
-        title: Text('AlertDialog Title'),
-        content: SingleChildScrollView(
-          child: ListBody(
-            children: <Widget>[
-              Text('This is a demo alert dialog.'),
-              Text('Would you like to approve of this message?'),
-            ],
-          ),
-        ),
-        actions: <Widget>[
-          FlatButton(
-            child: Text('Approve'),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
-      );
-    },
-  );
-}
-//==================================================================
-// FUNCTION#3: DIALOG - IOS
-//==================================================================  
-  Future<void> _ackAlert(BuildContext context) {
+          backgroundColor: Colors.red,
+          content: Text('This is Snackbar', style: TextStyle(color: Colors.yellow, fontSize: 20)),));
+
+    }
+//======================================================================
+// FUNCTION DIALOG
+//======================================================================   
+Future<void> _ackAlert(BuildContext context) {
   return showDialog<void>(
     context: context,
     builder: (BuildContext context) {
@@ -96,10 +70,11 @@ Future<void> _showMyDialog() async {
   );
 }
 
+//======================================================================
+// FUNCTION DIALOG - CONFIRM
+//====================================================================== 
 
- //==================================================================
-// FUNCTION#3: DIALOG 2
-//==================================================================  
+ 
 Future<ConfirmAction> _asyncConfirmDialog(BuildContext context) async {
   return showDialog<ConfirmAction>(
     context: context,
@@ -129,10 +104,11 @@ Future<ConfirmAction> _asyncConfirmDialog(BuildContext context) async {
 }
 
 
+//======================================================================
+// FUNCTION DIALOG - CONFIRM
+//====================================================================== 
 
-  //==================================================================
-// SELECT OPTION
-//==================================================================  
+ 
 Future<Departments> _asyncSimpleDialog(BuildContext context) async {
   return await showDialog<Departments>(
       context: context,
@@ -177,9 +153,9 @@ Future<Departments> _asyncSimpleDialog(BuildContext context) async {
 }
 
 
-//==================================================================
-// DIALOG WITH TEXT FIELD
-//================================================================== 
+//======================================================================
+// FUNCTION DIALOG - INPUT
+//====================================================================== 
 Future<String> _asyncInputDialog(BuildContext context) async {
   String teamName = '';
   return showDialog<String>(
@@ -215,4 +191,4 @@ Future<String> _asyncInputDialog(BuildContext context) async {
 }
 
 
-}
+} // CLASS
