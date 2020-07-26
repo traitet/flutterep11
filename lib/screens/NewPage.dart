@@ -10,7 +10,7 @@ class _NewPageState extends State<NewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('test'),),
+      appBar: AppBar(title: Text('EP11'),),
       body: Center(child: Text('test')),
 
       // child: Text('test')
