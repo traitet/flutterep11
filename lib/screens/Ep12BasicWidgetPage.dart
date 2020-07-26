@@ -33,9 +33,6 @@ class _Ep12BasicWidgetPageState extends State<Ep12BasicWidgetPage> {
   }
 }
 
-
-
-
 //=================================================================
 // CLASS ListViewItemWidget
 //=================================================================   
