@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterep11/screens/Ep12BasicWidgetPage.dart';
 import 'package:flutterep11/screens/Ep13Page.dart';
 import 'package:flutterep11/screens/Ep14Page.dart';
+import 'package:flutterep11/screens/Ep161Page.dart';
 import 'package:flutterep11/screens/NewPage.dart';
 
 void main() {
@@ -105,7 +106,8 @@ class _MyHomePageState extends State<MyHomePage> {
 //============================================================
 // CREATE BUTTON
 //============================================================
-            RaisedButton(onPressed: () {},child: Text('EP15 - No Code: Build Chorome & Release web to Git hub'),),
+            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep161Page()),);},child: Text('EP16-1 - BottomNavigationBar - Scaoffold'),),
+            RaisedButton(onPressed: () {},child: Text('EP15 - No Code: Build Chorme & Release web to Git hub'),),
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep14Page()),);},child: Text('EP14 - Snack Bar & Dialog'),),
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep13Page()),);},child: Text('EP13 - Basic Widget#2'),),
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep12BasicWidgetPage()),);},child: Text('EP12 - Basic Widget#1'),),               
