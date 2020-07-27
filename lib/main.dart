@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterep11/screens/Ep171Page.dart';
+import 'package:flutterep11/screens/Ep172Page.dart';
 import './screens/Ep164Page.dart';
 import './screens/Ep12BasicWidgetPage.dart';
 import './screens/Ep13Page.dart';
@@ -109,6 +111,8 @@ class _MyHomePageState extends State<MyHomePage> {
 //============================================================
 // CREATE BUTTON
 //============================================================
+            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep172Page()),);},child: Text('EP17-2 - GridViewBuilder'),),
+            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep171Page()),);},child: Text('EP17-1 - ListViewBuilder(Hori)'),),
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep164Page()),);},child: Text('EP16-4 - GridView-Card Navigator'),),
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep163Page()),);},child: Text('EP16-3 - Scaffold-Drawer'),),
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep162Page()),);},child: Text('EP16-2 - Scaoffold-AppBar-TabBar'),),
