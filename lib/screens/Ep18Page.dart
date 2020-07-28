@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterep11/widgets/TextFieldBorderLessWidget.dart';
-import 'package:flutterep11/widgets/TextFieldBorderWidget.dart';
+import '../widgets/TextFieldBorderLessWidget.dart';
+import '../widgets/TextFieldBorderWidget.dart';
 
 class Ep18Page extends StatefulWidget {
   @override
